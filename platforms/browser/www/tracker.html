@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sign In - Footcrew / Ambulance</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+        <script src="js/jquery-1.12.3.min.js"></script>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+		<!-- /Scripts -->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="img/logo.png" alt="" /></span><span class="title"></span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Control</a></li>
+							<li><a href="#">Footcrew</a></li>
+							<li><a href="#">Bike Crew</a></li>
+							<li><a href="#">Ambulance</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+				
+							</header>
+							<section class="tiles">
+								<article class="style1">
+	
+									
+										<h2 id="1234">Welcome</h2>
+										<div class="content">
+											</br>
+									<p id="5678">Please Wait</p>
+									<p id="demo">Please Wait</p>
+<script>
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
+var callsi = getUrlVars()["Name"];
+var ev = getUrlVars()["Event"];
+
+var x = document.getElementById("demo");
+var Y = document.getElementById("1234");
+var Z = document.getElementById("5678");
+    Y.innerHTML = "Welcome "+callsi;
+    Z.innerHTML = "The Event ID is: "+ev;
+	
+	
+
+
+function create() {
+         var team = {
+            "lat" : 0.0,
+            "lon" : 0.0,
+			"call" : callsi,
+			"event" : ev
+         };
+		 
+		$.ajax({
+        url: "https://visittramore.shanemulcahy.com/TrackerTesting/insert.php",
+        type: "post",
+        data: team
+    });
+ }
+create()
+var tid = setInterval(getLocation, 10000);
+      function getLocation() {
+           if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+           }
+      }
+
+      function showPosition(position) {
+    x.innerHTML = "Last Update Sent from " + callsi + ": " + Date();
+
+         var position = {
+            "lat" : position.coords.latitude,
+            "lon" : position.coords.longitude,
+			"call" : callsi
+         };
+		 
+		$.ajax({
+        url: "https://visittramore.shanemulcahy.com/TrackerTesting/update.php",
+        type: "post",
+        data: position
+    });
+ }
+
+</script></div>
+									</a>
+								</article>
+	
+					
+								
+								
+								
+						
+							
+							
+								
+								
+								
+								
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Shane Mulcahy / Andrew Dwyer. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		
+
+	</body>
+</html>
