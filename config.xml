@@ -1,4 +1,11 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.ShaneMulcahy.OMAC" version="1.0.0">
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+		
+		
   <name>Order Of Malta Control - Tracking</name>
   <description>Hello World sample application that responds to the deviceready event.</description>
       <author href="http://www.shanemulcahy.com" email="support@shanemulcahy.com">
@@ -18,5 +25,4 @@
     <description>
         Testing OMAC Tracker 
     </description>
-
 </widget>
